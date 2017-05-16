@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Details for the task:<%= @task.name %></h1>
+      <h4> Duration: <%= @task.duration%></h4>
+      <%= link_to "Edit #{@task.name}", edit_task_path(@task) %>
+      <br>
+      <%= link_to "Back to Tasks List", root_path  %>
+    </div>
+  </div>
+</div>
+
+

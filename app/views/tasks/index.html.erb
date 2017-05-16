@@ -1,0 +1,18 @@
+<div class="container">
+<h1>List of Tasks</h1>
+  <div class="row">
+  <h4><%= link_to "Create a new task", new_task_path%></h4>
+  <h3>Here are a list of tasks:</h3>
+  <% @tasks.each_with_index do |task, index| %>
+    <div class="col-xs-8 col-xs-offset-4">
+    <ul>
+    <li><%= index+1 %><%= link_to task.name, task_path(task) %>
+    <p><%= link_to "Edit", edit_task_path(task) %> <%= link_to "Delete this task", task_path(task), method: "delete" %> </p>
+    </li>
+    </ul>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+
